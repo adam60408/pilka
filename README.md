@@ -1,13 +1,16 @@
-# Ranking wtorkowej sali
+# Ranking wtorkowej sali v2
 
 Produkcyjna aplikacja React + Supabase + GitHub Pages.
 
-## Konfiguracja
-1. Uruchom `supabase-security.sql` w Supabase SQL Editor.
-2. W repozytorium GitHub dodaj Actions secrets:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_PUBLISHABLE_KEY`
-3. W Settings > Pages ustaw Source: GitHub Actions.
-4. Wgraj wszystkie pliki do głównego katalogu repozytorium i zatwierdź.
+## Nowości v2
+- TOP 3 wyróżnione kolorami,
+- brak średniej w rankingu,
+- kolumna Seria,
+- +3 pkt za 5 kolejnych obecności,
+- dodatkowe +5 pkt za 10 kolejnych obecności i każde następne pełne 10,
+- brak udziału w meczu zeruje bieżącą serię,
+- administrator może edytować datę, uczestnictwo i wyniki historycznych meczów,
+- ranking i bonusy są przeliczane od początku po każdej zmianie.
 
-Nigdy nie dodawaj klucza secret/service_role do repozytorium.
+## Wdrożenie
+Wgraj całą zawartość paczki do głównego katalogu repozytorium `pilka`, zastępując istniejące pliki. Nie zmieniaj sekretów GitHub. Dane pozostają w Supabase.
