@@ -1,20 +1,14 @@
-# Ranking wtorkowej sali v3
+# Ranking wtorkowej sali v4
 
-## Zmiany
-- brak obecności: 0 pkt,
-- obecność i porażka: 1 pkt,
-- remis: 2 pkt,
-- zwycięstwo: 3 pkt,
-- Mateusz Wachowski zmieniony na Damian Matłoka,
-- administrator oznacza osobę zabierającą znaczniki przełącznikiem Z,
-- czerwony znaczek Z przy nazwisku w rankingu; liczba oznacza ile razy zawodnik zabierał znaczniki,
-- kolumna Forma pokazuje pięć ostatnich terminów: zielony ✓, czerwony ×, szary −, puste pole za nieobecność,
-- edycja historycznych meczów obejmuje również znaczniki.
+Finalna wersja bez bonusów aktywności.
 
-## Instalacja
-1. Uruchom `supabase-migration-v3.sql` w Supabase SQL Editor.
-2. Wgraj pozostałe pliki do głównego katalogu publicznego repozytorium `pilka`, zastępując stare pliki.
-3. GitHub Actions wdroży aplikację automatycznie.
+- Nieobecność: 0 pkt i brak rekordu wyniku.
+- Porażka: 1 pkt.
+- Remis: 2 pkt.
+- Wygrana: 3 pkt.
+- Forma: pięć ostatnich terminów, od najstarszego po lewej do najnowszego po prawej.
+- Zielony ✓ = wygrana, szary − = remis, czerwony × = porażka, puste pole = nieobecność.
+- Administrator może oznaczyć Z przy uczestniku, edytować mecze historyczne i oznaczenia Z.
+- Czerwone Z z liczbą na rankingu pokazuje, ile razy zawodnik zabierał znaczniki.
 
-## Punktacja bez bonusów
-Ranking obejmuje wyłącznie punkty meczowe: brak obecności 0, porażka 1, remis 2, zwycięstwo 3. Nie są naliczane żadne bonusy za kolejne obecności.
+Migracja `supabase-migration-v3.sql` jest powtarzalna. Jeśli została już wykonana, nie trzeba uruchamiać jej ponownie.
