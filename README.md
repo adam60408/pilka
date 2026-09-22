@@ -1,16 +1,20 @@
-# Ranking wtorkowej sali v2
+# Ranking wtorkowej sali v3
 
-Produkcyjna aplikacja React + Supabase + GitHub Pages.
+## Zmiany
+- brak obecności: 0 pkt,
+- obecność i porażka: 1 pkt,
+- remis: 2 pkt,
+- zwycięstwo: 3 pkt,
+- Mateusz Wachowski zmieniony na Damian Matłoka,
+- administrator oznacza osobę zabierającą znaczniki przełącznikiem Z,
+- czerwony znaczek Z przy nazwisku w rankingu; liczba oznacza ile razy zawodnik zabierał znaczniki,
+- kolumna Forma pokazuje pięć ostatnich terminów: zielony ✓, czerwony ×, szary −, puste pole za nieobecność,
+- edycja historycznych meczów obejmuje również znaczniki.
 
-## Nowości v2
-- TOP 3 wyróżnione kolorami,
-- brak średniej w rankingu,
-- kolumna Seria,
-- +3 pkt za 5 kolejnych obecności,
-- dodatkowe +5 pkt za 10 kolejnych obecności i każde następne pełne 10,
-- brak udziału w meczu zeruje bieżącą serię,
-- administrator może edytować datę, uczestnictwo i wyniki historycznych meczów,
-- ranking i bonusy są przeliczane od początku po każdej zmianie.
+## Instalacja
+1. Uruchom `supabase-migration-v3.sql` w Supabase SQL Editor.
+2. Wgraj pozostałe pliki do głównego katalogu publicznego repozytorium `pilka`, zastępując stare pliki.
+3. GitHub Actions wdroży aplikację automatycznie.
 
-## Wdrożenie
-Wgraj całą zawartość paczki do głównego katalogu repozytorium `pilka`, zastępując istniejące pliki. Nie zmieniaj sekretów GitHub. Dane pozostają w Supabase.
+## Punktacja bez bonusów
+Ranking obejmuje wyłącznie punkty meczowe: brak obecności 0, porażka 1, remis 2, zwycięstwo 3. Nie są naliczane żadne bonusy za kolejne obecności.
